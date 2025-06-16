@@ -1,2 +1,5 @@
+# Ignore Python cache
 __pycache__/
 *.pyc
+# Ignore text_converter
+text_converter.py
