@@ -1,17 +1,15 @@
 import rateSheet from './rates.js'
-
+import getOrigin from './location.js'
 let deliveryValue = ''
 let addressValue = ''
 let zipValue = ''
-let address = ''
-let apiKey = 'AIzaSyB_MehJUmHury0rl2pJ1Obi_sYmqaIRz9w'
 let addy = ''
 let distanceMiles = 0
 let weight = 0
 document.getElementById('submit').addEventListener('click', () => {
     deliveryValue = document.getElementById('deliveryType').value;
     addressValue = document.getElementById('address').value;
-    zipValue = document.getElementById('zip').value;
+    zipValue = Number(document.getElementById('zip').value);
     weight = document.getElementById('weight').value;
     addy = addressValue + ',' + zipValue
 })
@@ -21,6 +19,7 @@ document.getElementById('submit').addEventListener('click', () => {
 let originLocation = 'Kenner,LA';
 let originLat = 30
 let originLong = -90
+let originCode = ''
 // geocode the addresses received to lat and long
 
 
@@ -37,6 +36,8 @@ document.getElementById('submit').addEventListener('click', () => {
         }
     }
     )
+
     console.log('Rate:', rateSheet(deliveryValue, distanceMiles, weight))
+    let originCode = getOrigin(zipValue)
 })
 

@@ -16,6 +16,7 @@
     defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHdcbgx6c4y141GHgQHczCE-T9F3ZpABg&callback=initMap&libraries=geometry">
   </script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.full.min.js"></script>
 </head>
 <body>
   <div id="page">
@@ -29,7 +30,7 @@
 </select>
     <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
   <input type="text" class="form-control" placeholder="City Ex: Kenner" aria-label="Address" aria-describedby="addon-wrapping" id="address">
-  <input type="text" class="form-control" placeholder="State Ex: LA" aria-label="Zip Code" aria-describedby="addon-wrapping" id="zip">
+  <input type="text" class="form-control" placeholder="Zip" aria-label="Zip Code" aria-describedby="addon-wrapping" id="zip">
   <input type="text" class="form-control" placeholder="Weight Ex: 1000" aria-label="Zip Code" aria-describedby="addon-wrapping" id="weight">
 </div>
 <button type="button" class="btn"  id="submit">Submit</button>
