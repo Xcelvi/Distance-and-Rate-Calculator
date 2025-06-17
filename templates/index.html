@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Example</title>
+  
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+  crossorigin="anonymous"
+/>
+
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+  <script async
+    defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHdcbgx6c4y141GHgQHczCE-T9F3ZpABg&callback=initMap&libraries=geometry">
+  </script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div id="page">
+    <select class="form-select" aria-label="Default select example" id="deliveryType">
+    <option selected>Select delivery type</option>
+    <option value="1">No Signature</option>
+    <option value="2">Basic Service</option>
+    <option value="3">Room of choice</option>
+    <option value="4">White Glove</option>
+    <option value="5">Regular</option>
+    </select>
+        <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
+      <input type="text" class="form-control" placeholder="City Ex: Kenner" aria-label="Address" aria-describedby="addon-wrapping" id="address">
+      <input type="text" class="form-control" placeholder="Zip" aria-label="Zip Code" aria-describedby="addon-wrapping" id="zip">
+      <input type="text" class="form-control" placeholder="Weight Ex: 1000" aria-label="Zip Code" aria-describedby="addon-wrapping" id="weight">
+    </div>
+    <button type="button" class="btn"  id="submit" style="background-color: lightgray;">Submit</button>
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" style="padding: 1vw 0px 0px 0px;">
+      <input type="checkbox" class="btn-check" id="docFee" autocomplete="off">
+      <label class="btn btn-outline-primary" for="docFee">Document Fee</label>
+
+      <input type="checkbox" class="btn-check" id="waiting" autocomplete="off">
+      <label class="btn btn-outline-primary" for="waiting">1 Hour Waiting Time</label>
+
+      <input type="checkbox" class="btn-check" id="photos" autocomplete="off">
+      <label class="btn btn-outline-primary" for="photos">Photos</label>
+      
+      <input type="checkbox" class="btn-check" id="Hazmat" autocomplete="off">
+      <label class="btn btn-outline-primary" for="Hazmat">Hazmat</label>
+      
+      <input type="checkbox" class="btn-check" id="liftA" autocomplete="off">
+      <label class="btn btn-outline-primary" for="liftA">Liftgate (A-C)</label>
+
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+      <input type="checkbox" class="btn-check" id="liftgateD" autocomplete="off">
+      <label class="btn btn-outline-primary" for="liftgateD">Beyond Liftgate (D-E)</label>
+
+      <input type="checkbox" class="btn-check" id="inside" autocomplete="off">
+      <label class="btn btn-outline-primary" for="inside">Inside</label>
+
+      <input type="checkbox" class="btn-check" id="gov" autocomplete="off">
+      <label class="btn btn-outline-primary" for="gov">Convention/Hotel/Mall/School/Casino/Hospital</label>
+      
+      <input type="checkbox" class="btn-check" id="refine" autocomplete="off">
+      <label class="btn btn-outline-primary" for="refine">Whart/Refinery/Military/Government</label>
+      
+      <input type="checkbox" class="btn-check" id="resi" autocomplete="off">
+      <label class="btn btn-outline-primary" for="resi">Residential</label>
+    </div>
+  </div>
+  
+</body>
+    
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</html>

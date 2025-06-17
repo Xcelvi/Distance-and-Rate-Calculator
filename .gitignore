@@ -1,3 +1,54 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.env/  # also used by dotenv to store secrets
+
+
+# SQLite DBs (if you use them)
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# MacOS system files
+.DS_Store
+
+# VSCode settings (optional)
+.vscode/
+
+# Python environment files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Compiled HTML/docs (if using Sphinx)
+_build/
+docs/_build/
+
 # Ignore Python cache
 __pycache__/
 *.pyc
