@@ -1,5 +1,5 @@
 let price = 0
-
+// This is our entire rate sheet for DFW. It takes our origin located in the location.js and the weight to calculate
 function rateSheet(originCode, weight) {
     if (originCode == 'dfwA'){
         if (weight < 356){

@@ -7,6 +7,7 @@ let addy = ''
 let distanceMiles = 0
 let weight = 0
 let price = 0
+//establishes all the values from the user inputted data
 document.getElementById('submit').addEventListener('click', () => {
     addressValue = document.getElementById('address').value;
     zipValue = Number(document.getElementById('zip').value);
@@ -22,10 +23,10 @@ let originLong = -90
 let originCode = ''
 // geocode the addresses received to lat and long
 
-
 document.getElementById('submit').addEventListener('click', () => {
     
     const directionsService = new google.maps.DirectionsService();
+    //Compared the inputted address to the Origin, and outputs the driving distance
     directionsService.route({origin: 'Kenner,LA', destination: addy, travelMode: google.maps.TravelMode.DRIVING,}, (results, status) => {
         if (status === google.maps.DirectionsStatus.OK){
             const route = results.routes[0];
@@ -35,11 +36,13 @@ document.getElementById('submit').addEventListener('click', () => {
             console.log(distanceMiles)
         }
     }
+    //When the  submit button is pressed, it flips all accessorials to off
     )
     document.querySelectorAll('.btn-check.on').forEach(el => el.checked = false)
     document.querySelectorAll('.btn-check.on').forEach( el =>
         el.classList.replace('on', 'off')
     )
+    //Calculates and displays the price
     price = 0
     let originCode = getOrigin(zipValue)
     price = rateSheet(originCode, weight)
@@ -50,17 +53,7 @@ document.getElementById('submit').addEventListener('click', () => {
     }
 })
 
-const docFee = 25
-const waiting = 55
-const photos = 10
-const hazmant = 75
-const liftA = 40
-const liftD = 55
-const inside = 20
-const mall = 25
-const refine = 40
-const resi = 20
-
+// Adds the charges to the price if price is established, and turns the button on
 document.getElementById('accessCharges').addEventListener('change', function(event){
     const btn = event.target
     let accessPrice = event.target.id
