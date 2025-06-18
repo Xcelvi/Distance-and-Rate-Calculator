@@ -36,12 +36,18 @@ document.getElementById('submit').addEventListener('click', () => {
         }
     }
     )
-    
+    document.querySelectorAll('.btn-check.on').forEach(el => el.checked = false)
+    document.querySelectorAll('.btn-check.on').forEach( el =>
+        el.classList.replace('on', 'off')
+    )
+    price = 0
     let originCode = getOrigin(zipValue)
     price = rateSheet(originCode, weight)
     const div = document.getElementById('ID')
-    div.innerHTML = "Price: $" + price
-    console.log('Price:', price)
+    if (price){
+        div.innerHTML = "Price: $" + price
+        console.log('Price:', price)
+    }
 })
 
 const docFee = 25
@@ -61,16 +67,20 @@ document.getElementById('accessCharges').addEventListener('change', function(eve
     accessPrice = parseInt(accessPrice)
     if (btn.classList.contains('off')){
         btn.classList.replace('off', 'on')
-        price = price + accessPrice
-        const div = document.getElementById('ID')
-        div.innerHTML = "Price: $" + price
-        console.log('Price:', price)
+        if (price){
+            price = price + accessPrice
+            const div = document.getElementById('ID')
+            div.innerHTML = "Price: $" + price
+            console.log('Price:', price)
+        }
     } else{
         btn.classList.replace('on', 'off')
-        price = price - accessPrice
-        const div = document.getElementById('ID')
-        div.innerHTML = "Price: $" + price
-        console.log('Price:', price)
+        if (price){
+            price = price - accessPrice
+            const div = document.getElementById('ID')
+            div.innerHTML = "Price: $" + price
+            console.log('Price:', price)
+        }
     }
 })
 document.getElementById('accessChargess').addEventListener('change', function(event){
@@ -79,15 +89,19 @@ document.getElementById('accessChargess').addEventListener('change', function(ev
     accessPrice = parseInt(accessPrice)
     if (btn.classList.contains('off')){
         btn.classList.replace('off', 'on')
-        price = price + accessPrice
-        const div = document.getElementById('ID')
-        div.innerHTML = "Price: $" + price
-        console.log('Price:', price)
+        if (price){
+            price = price + accessPrice
+            const div = document.getElementById('ID')
+            div.innerHTML = "Price: $" + price
+            console.log('Price:', price)
+        }
     } else{
         btn.classList.replace('on', 'off')
-        price = price - accessPrice
-        const div = document.getElementById('ID')
-        div.innerHTML = "Price: $" + price
-        console.log('Price:', price)
+        if (price){
+            price = price - accessPrice
+            const div = document.getElementById('ID')
+            div.innerHTML = "Price: $" + price
+            console.log('Price:', price)
+        }
     }
 })
