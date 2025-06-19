@@ -11,3 +11,6 @@ body{
     align-items: center;
     padding: 15%;
 }
+.navbar-brand{
+    color: blue;
+}
