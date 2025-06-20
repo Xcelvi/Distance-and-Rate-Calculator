@@ -1,6 +1,14 @@
-{% extends "base.html" %}
+{%extends "base.html"%}
 
 {% block head %}{% endblock %}
 
-{% block nav %}{% endblock %}
-
+{%block body%}
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+    <div id="page" style="padding: 0px 0px 0px 0px;">
+    
+          <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
+        <textarea name="" id="" style="height: 30vh; width: 60vw; resize: none;"></textarea>
+      </div>
+      <button type="button" class="btn"  id="submit" style="background-color: lightgray;">Submit</button>
+    </div>
+{%endblock%}

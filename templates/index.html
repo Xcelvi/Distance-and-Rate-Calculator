@@ -3,52 +3,54 @@
 {% block head %}{% endblock %}
 
 {%block body%}
-  <div id="page">
-  
-        <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
-      <input type="text" class="form-control" placeholder="City Ex: Kenner" aria-label="Address" aria-describedby="addon-wrapping" id="address">
-      <input type="text" class="form-control" placeholder="Zip" aria-label="Zip Code" aria-describedby="addon-wrapping" id="zip">
-      <input type="text" class="form-control" placeholder="Weight Ex: 1000" aria-label="Zip Code" aria-describedby="addon-wrapping" id="weight">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+    <div id="page" style="padding: 0px 0px 0px 0px;">
+    
+          <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
+        <input type="text" class="form-control" placeholder="City Ex: Kenner" aria-label="Address" aria-describedby="addon-wrapping" id="address">
+        <input type="text" class="form-control" placeholder="Zip" aria-label="Zip Code" aria-describedby="addon-wrapping" id="zip">
+        <input type="text" class="form-control" placeholder="Weight Ex: 1000" aria-label="Zip Code" aria-describedby="addon-wrapping" id="weight">
+      </div>
+      <button type="button" class="btn"  id="submit" style="background-color: lightgray;">Submit</button>
+      <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" style="padding: 1vw 0px 0px 0px;" id="accessCharges">
+        <input type="checkbox" class="btn-check off" id="25docFee" autocomplete="off">
+        <label class="btn btn-outline-primary" for="25docFee">Document Fee</label>
+
+        <input type="checkbox" class="btn-check off" id="15crossDock" autocomplete="off">
+        <label class="btn btn-outline-primary" for="15crossDock">Cross Dock</label>
+
+        <input type="checkbox" class="btn-check off" id="55waiting" autocomplete="off">
+        <label class="btn btn-outline-primary" for="55waiting">1 Hour Waiting Time</label>
+
+        <input type="checkbox" class="btn-check off" id="10photos" autocomplete="off">
+        <label class="btn btn-outline-primary" for="10photos">Photos</label>
+        
+        <input type="checkbox" class="btn-check off" id="75hazmat" autocomplete="off">
+        <label class="btn btn-outline-primary" for="75hazmat">Hazmat</label>
+        
+        <input type="checkbox" class="btn-check off" id="40liftA" autocomplete="off">
+        <label class="btn btn-outline-primary" for="40liftA">Liftgate (A-C)</label>
+
+      </div>
+      <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" id="accessChargess">
+        <input type="checkbox" class="btn-check off" id="55liftD" autocomplete="off">
+        <label class="btn btn-outline-primary" for="55liftD">Beyond Liftgate (D-E)</label>
+
+        <input type="checkbox" class="btn-check off" id="20inside" autocomplete="off">
+        <label class="btn btn-outline-primary" for="20inside">Inside</label>
+
+        <input type="checkbox" class="btn-check off" id="25mall" autocomplete="off">
+        <label class="btn btn-outline-primary" for="25mall">Convention/Hotel/Mall/School/Casino/Hospital</label>
+        
+        <input type="checkbox" class="btn-check off" id="40refine" autocomplete="off">
+        <label class="btn btn-outline-primary" for="40refine">Whart/Refinery/Military/Government</label>
+        
+        <input type="checkbox" class="btn-check off" id="20resi" autocomplete="off">
+        <label class="btn btn-outline-primary" for="20resi">Residential</label>
+        <input type="checkbox" class="btn-check off" id="10buisnessApt" autocomplete="off">
+        <label class="btn btn-outline-primary" for="10buisnessApt">Business Appointment</label>
+      </div>
+      <div style="display: flex; justify-content: center;" id="ID"></div>
     </div>
-    <button type="button" class="btn"  id="submit" style="background-color: lightgray;">Submit</button>
-    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" style="padding: 1vw 0px 0px 0px;" id="accessCharges">
-      <input type="checkbox" class="btn-check off" id="25docFee" autocomplete="off">
-      <label class="btn btn-outline-primary" for="25docFee">Document Fee</label>
-
-      <input type="checkbox" class="btn-check off" id="15crossDock" autocomplete="off">
-      <label class="btn btn-outline-primary" for="15crossDock">Cross Dock</label>
-
-      <input type="checkbox" class="btn-check off" id="55waiting" autocomplete="off">
-      <label class="btn btn-outline-primary" for="55waiting">1 Hour Waiting Time</label>
-
-      <input type="checkbox" class="btn-check off" id="10photos" autocomplete="off">
-      <label class="btn btn-outline-primary" for="10photos">Photos</label>
-      
-      <input type="checkbox" class="btn-check off" id="75hazmat" autocomplete="off">
-      <label class="btn btn-outline-primary" for="75hazmat">Hazmat</label>
-      
-      <input type="checkbox" class="btn-check off" id="40liftA" autocomplete="off">
-      <label class="btn btn-outline-primary" for="40liftA">Liftgate (A-C)</label>
-
-    </div>
-    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" id="accessChargess">
-      <input type="checkbox" class="btn-check off" id="55liftD" autocomplete="off">
-      <label class="btn btn-outline-primary" for="55liftD">Beyond Liftgate (D-E)</label>
-
-      <input type="checkbox" class="btn-check off" id="20inside" autocomplete="off">
-      <label class="btn btn-outline-primary" for="20inside">Inside</label>
-
-      <input type="checkbox" class="btn-check off" id="25mall" autocomplete="off">
-      <label class="btn btn-outline-primary" for="25mall">Convention/Hotel/Mall/School/Casino/Hospital</label>
-      
-      <input type="checkbox" class="btn-check off" id="40refine" autocomplete="off">
-      <label class="btn btn-outline-primary" for="40refine">Whart/Refinery/Military/Government</label>
-      
-      <input type="checkbox" class="btn-check off" id="20resi" autocomplete="off">
-      <label class="btn btn-outline-primary" for="20resi">Residential</label>
-      <input type="checkbox" class="btn-check off" id="10buisnessApt" autocomplete="off">
-      <label class="btn btn-outline-primary" for="10buisnessApt">Business Appointment</label>
-    </div>
-    <div style="display: flex; justify-content: center;" id="ID"></div>
   </div>
 {%endblock%}
