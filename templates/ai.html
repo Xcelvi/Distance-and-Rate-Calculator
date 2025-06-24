@@ -1,15 +1,33 @@
-{%extends "base.html"%}
-
-{% block head %}{% endblock %}
-
-{%block body%}
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
-    <div id="page" style="padding: 0px 0px 0px 0px;">
-    
-          <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
-        <textarea name="" id="aiText" style="height: 30vh; width: 60vw; resize: none;"></textarea>
-      </div>
-      <button type="button" class="btn"  id="submit" style="background-color: lightgray;">Submit</button>
+{%extends "base.html"%} {% block head %}{% endblock %} {%block body%}
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  "
+>
+  <div id="page" style="padding: 0px 0px 0px 0px">
+    <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px">
+      <textarea
+        name=""
+        id="aiText"
+        style="height: 30vh; width: 60vw; resize: none"
+      ></textarea>
     </div>
-    <script type="module" src="{{ url_for('static', filename='ai.js') }}"></script>
-{%endblock%}
+    <button
+      type="button"
+      class="btn"
+      id="submit"
+      style="background-color: lightgray"
+    >
+      Submit
+    </button>
+  </div>
+  <script
+    type="module"
+    src="{{ url_for('static', filename='ai.js') }}"
+  ></script>
+  {%endblock%}
+</div>
