@@ -7,8 +7,9 @@
     <div id="page" style="padding: 0px 0px 0px 0px;">
     
           <div class="input-group flex-nowrap" style="padding: 10px 0px 10px 0px;">
-        <textarea name="" id="" style="height: 30vh; width: 60vw; resize: none;"></textarea>
+        <textarea name="" id="aiText" style="height: 30vh; width: 60vw; resize: none;"></textarea>
       </div>
       <button type="button" class="btn"  id="submit" style="background-color: lightgray;">Submit</button>
     </div>
+    <script type="module" src="{{ url_for('static', filename='ai.js') }}"></script>
 {%endblock%}
