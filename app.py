@@ -35,11 +35,14 @@ def index():
     #See all current tasks
     else:
         tasks = MyTask.query.order_by(MyTask.created).all()
-        return render_template("index.html", tasks=tasks)
+        return render_template("MSYQuotes.html", tasks=tasks)
 #Establish AI page
 @app.route("/ai", methods=["POST", "GET"])
 def ai():
     return render_template('ai.html')
+@app.route("/MSY", methods=["POST", "GET"])
+def ai():
+    return render_template('MSYQuotes.html')
 if __name__ in ("__main__"):
     #Established a connection with the term context. This handles current requests, app, and user
     with app.app_context():
