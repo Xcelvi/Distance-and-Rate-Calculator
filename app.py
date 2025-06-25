@@ -19,8 +19,8 @@ class MyTask(db.Model):
         return f'Task {self.id}'
 
 #Establish home page
-@app.route("/", methods=["POST","GET"])
-def index():
+@app.route("/MSY", methods=["POST","GET"])
+def msy():
     #Add task
     if request.method == "POST":
         current_task = request.form['content']
@@ -40,9 +40,9 @@ def index():
 @app.route("/ai", methods=["POST", "GET"])
 def ai():
     return render_template('ai.html')
-@app.route("/MSY", methods=["POST", "GET"])
-def ai():
-    return render_template('MSYQuotes.html')
+@app.route("/DFW", methods=["POST", "GET"])
+def dfw():
+    return render_template('DFWQuotes.html')
 if __name__ in ("__main__"):
     #Established a connection with the term context. This handles current requests, app, and user
     with app.app_context():
